@@ -2,11 +2,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Create navbar dynamically
     const navbar = document.getElementById('navbar');
     const navItems = [
-      { text: 'Home', href: '../index.html' },
-      { text: 'About Us', href: '../HTML/aboutus.html' },
-      { text: 'Contact Us', href: '../HTML/contactus.html' },
-      { text: 'Login', href: '../HTML/login.html' },
-      { text: 'Signup', href: '../HTML/signup.html' },
+      { text: 'Home', href: 'index.html' },
+      { text: 'About Us', href: 'aboutus.html' },
+      { text: 'Contact Us', href: 'contactus.html' },
+      { text: 'Login', href: 'login.html' },
+      { text: 'Signup', href: 'signup.html' },
     ];
     
     const ul = document.createElement('ul');
