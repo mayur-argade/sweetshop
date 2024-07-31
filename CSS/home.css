@@ -1,0 +1,267 @@
+/* styles.css */
+:root {
+    --gray-darker: #444444;
+    --gray-dark: #696969;
+    --gray: #999999;
+    --gray-light: #cccccc;
+    --gray-lighter: #ececec;
+    --gray-lightest: #f0f0f0;
+    --primary-color: #f8b400;
+    --header-bg: white;
+    --header-text: black;
+    --footer-bg: #333;
+    --footer-text: white;
+}
+
+body {
+    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: var(--gray);
+    background-color: var(--gray-lightest);
+    margin: 0;
+    padding: 0rem;
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 10px 0;
+}
+
+/* Keyframes for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Apply the animation to the container */
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    opacity: 0; /* Initially hidden */
+    animation: fadeIn 0.5s ease-in forwards; /* Apply fade-in animation */
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: var(--header-text);
+    text-decoration: none;
+}
+
+.hero {
+    background: url('https://images.unsplash.com/photo-1667185487417-c4ca98eb0352?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW5kaWFuJTIwc3dlZXR8ZW58MHwwfDB8fHwy') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero h2 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin: 20px 0;
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn--block {
+    display: block;
+    width: 100%;
+}
+
+section {
+    padding: 50px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about {
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.about-content {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.about-content h2 {
+    font-size: 2.5em;
+    color: var(--gray-darker);
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.about-content h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary-color);
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+.about-text {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-image {
+    margin-top: 30px;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu {
+    background-color: #f4f4f4;
+}
+
+.menu-item {
+    margin-bottom: 20px;
+}
+
+.contact {
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+address a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    text-align: center;
+    padding: 10px 0;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cards__item {
+    flex: 1 1 calc(33.3333% - 30px);
+    margin: 15px;
+    box-sizing: border-box;
+}
+
+.card {
+    background-color: white;
+    border-radius: 0.25rem;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card__content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.card__image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    filter: contrast(70%);
+    position: relative;
+    transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);
+    &::before {
+        content: "";
+        display: block;
+        padding-top: 56.25%; /* 16:9 aspect ratio */
+    }
+}
+
+.card__image--chocolate {
+    background-image: url('https://sugargeekshow.com/wp-content/uploads/2023/10/easy_chocolate_cake_slice-500x375.jpg');
+}
+
+.card__image--cheesecake {
+    background-image: url('https://food-images.files.bbci.co.uk/food/recipes/no-bake_strawberry_30276_16x9.jpg');
+}
+
+.card__image--cookies {
+    background-image: url('https://plus.unsplash.com/premium_photo-1697537045174-e04d4dcd06b2?fm=jpg&w=3000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Z2luZ2VyJTIwY29va2llc3xlbnwwfHwwfHx8MA%3D%3D');
+}
+
+.card__title {
+    color: var(--gray-dark);
+    font-size: 1.25rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.card__text {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+}

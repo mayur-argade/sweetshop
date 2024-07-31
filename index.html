@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sweet Shop Landing Page</title>
+    <link rel="stylesheet" href="./CSS/home.css" />
+    <script defer src="/JS/global.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Sweet Shop</h1>
+        <nav id="navbar"></nav>
+      </div>
+    </header>
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h2>Welcome to Sweet Shop</h2>
+        <p>Your one-stop destination for delicious sweets and treats!</p>
+        <a href="#menu" class="btn">Explore Our Menu</a>
+      </div>
+    </section>
+    <section id="about" class="about">
+      <div class="container">
+        <div class="about-content">
+          <h2>About Us</h2>
+          <div class="about-text">
+            <p>
+              At Sweet Shop, we offer a wide range of mouth-watering sweets made
+              with love and care. Our recipes are inspired by traditional
+              methods and are crafted to bring joy to every bite.
+            </p>
+            <p>
+              We use only the finest ingredients to ensure that each treat is
+              not only delicious but also made with the utmost quality. Whether
+              you're celebrating a special occasion or simply indulging in a
+              sweet craving, Sweet Shop has something for everyone.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="menu" class="menu">
+      <div class="container">
+        <h2>Our Menu</h2>
+        <ul class="cards" id="menu-cards">
+        </ul>
+      </div>
+    </section>
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <p>Have questions or want to place an order? Reach out to us!</p>
+        <form id="contact-form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+          <button type="submit">Submit</button>
+        </form>
+        <address>
+          <p>Email: <a href="mailto:info@sweetshop.com">info@sweetshop.com</a></p>
+          <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
+        </address>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 Sweet Shop. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
